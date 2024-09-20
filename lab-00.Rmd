@@ -7,25 +7,24 @@ output: html_document
 
 ### Load packages and data
 
-```{r load-packages, message=FALSE}
+```{r load-packages, message=FALSE, warning=FALSE}
 library(tidyverse) 
 ```
 
 ### Exercises 16-17
 
-We set up the data frame. Edit the data below to include information about your team members.
-
+We set up the data frame. Edit the data below to include information about your team members.colous
 ```{r setup-tibble}
 team_data <- tibble(
-  name = c("Peter Rabbit", "member 1", "member 2", 
-           "member 3", "member 4"),
-  github_username = c("mcgregors-garden", "username 1", "username 2", 
-                      "username 3", "username 4"), 
-  colour = c("powderblue", "colour 1", "colour 2", 
-             "colour 3", "colour 4"),
-  hobby = c("Hopping", "hobby 1", "hobby 2", 
-            "hobby 3", "hobby 4"),
-  favourite_number = c(2, NA, NA, NA, NA)
+  name = c("Caitlin", "Karis", "Lena", 
+           "Ellie", "John", "Elaine"),
+  github_username = c("cb0wman2", "karis-mcfarlane", "lenaartus", 
+                      "elliehuntt", "johnwatson-06", "elaine-cyl"), 
+  colour = c("powderblue", "maroon", "pink", 
+             "blue", "royalblue", "lightpink"),
+  hobby = c("Swimming", "Sleeping", "Running", 
+            "Cooking", "Tennis", "Travelling"),
+  favourite_number = c(7, 3, 22, 16, 10, 11)
   )
 
 team_data
@@ -41,21 +40,24 @@ p1 <- ggplot(data = team_data,
                            y = favourite_number,
                            fill = colour), 
              ) +
+  labs(x = "\n GitHub Username",
+       y = "Favourite Number \n",
+       title = "Bar Chart") +
    geom_col() +
    scale_fill_identity()
 p1
 ```
 
 
-*Remove this text (including the stars), and add your answer for Exercise 18 here.*
+
 
 ### Exercises 19
 
 Change the text of the plot title and axis labels.
 
 ```{r labelled-bar-plot}
-p1 + labs(x = "Insert text here", 
-          y = "Insert text here",
+p1 + labs(x = "GitHub Username", 
+          y = "",
           title = "Insert text here")
 ```
 
