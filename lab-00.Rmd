@@ -48,7 +48,7 @@ p1 <- ggplot(data = team_data,
 p1
 ```
 
-
+Shows favorite number for each member in bar plot.
 
 
 ### Exercises 19
@@ -56,12 +56,11 @@ p1
 Change the text of the plot title and axis labels.
 
 ```{r labelled-bar-plot}
-p1 + labs(x = "GitHub Username", 
-          y = "Favourite Number",
+p1 + labs(x = "\n GitHub Username", 
+          y = "Favorite Number \n",
           title = "Bar Plot")
 ```
 
-*Remove this text (including the stars), and add your answer for Exercise 19 here.*
 
 ### Exercise 20
 
@@ -71,4 +70,4 @@ p2 <- ggplot(team_data, aes(x = hobby)) +
 p2
 ```
 
-*Remove this text (including the stars) and add your answer for Exercise 20 here.*
+Everyone has different hobbies, so the count is one for all of them. If we extended the data frame of people taking this course, we would need to give a select delectable options for people to choose from.
