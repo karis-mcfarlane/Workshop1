@@ -57,8 +57,8 @@ Change the text of the plot title and axis labels.
 
 ```{r labelled-bar-plot}
 p1 + labs(x = "GitHub Username", 
-          y = "",
-          title = "Insert text here")
+          y = "Favourite Number",
+          title = "Bar Plot")
 ```
 
 *Remove this text (including the stars), and add your answer for Exercise 19 here.*
